@@ -148,7 +148,13 @@
       <p class="lead">We're pouring the foundation now. Be among the first to know when Hahn Sparkling launches — and help us hydrate the homeless from day one.</p>
       <div class="join">
         <p style="font-size:1.1rem;margin-bottom:.8rem;"><span class="k">Text</span> the word <strong>SPARKLING</strong> to <a class="big" href="sms:+12526266236">(252) 626-6236</a></p>
-        <p style="color:var(--muted)">or email <a href="mailto:dhahn402@gmail.com?subject=Hahn%20Sparkling%20%E2%80%94%20Notify%20Me" style="color:var(--ice2);font-weight:600">dhahn402@gmail.com</a> — we'll add you to the first-pour list.</p>
+        <p style="color:var(--muted)">or leave your email below — we'll add you to the first-pour list.</p>
+        <form id="waitlist" style="margin-top:1.2rem;display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;max-width:460px;margin-left:auto;margin-right:auto">
+          <input id="wl-email" type="email" name="email" required placeholder="Your email" aria-label="Your email"
+            style="flex:1 1 220px;min-width:0;padding:.9rem 1.1rem;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:inherit;font-size:1rem" />
+          <button class="btn btn-ice" type="submit">Notify me →</button>
+        </form>
+        <p id="wl-ok" style="display:none;margin-top:1rem;color:var(--ice2);font-weight:600">🙏 You're on the first-pour list — thank you!</p>
       </div>
     </div>
   </section>
@@ -172,6 +178,27 @@
       <a href="https://hahntechcorp.com" style="color:inherit;text-decoration:underline">Hahn Tech Corp</a> · <a href="https://koalateakratom.com" style="color:inherit;text-decoration:underline">Koala Tea Kratom</a> · <a href="https://red-sea-rentals.com" style="color:inherit;text-decoration:underline">Red Sea Rentals</a> · <a href="https://readytechrepairs.com" style="color:inherit;text-decoration:underline">Ready Tech Repairs</a> · <a href="https://ubuntumylife.com" style="color:inherit;text-decoration:underline">Ubuntu My Life</a> · <a href="https://flipthecupfinancials.com" style="color:inherit;text-decoration:underline">Flip the Cup</a> · <a href="https://everandamen.org" style="color:inherit;text-decoration:underline">Ever & Amen</a> · <a href="https://donutsphobagels.com" style="color:inherit;text-decoration:underline">Donuts Pho Bagels</a> · <a href="https://hahnsparkling.com" style="color:inherit;text-decoration:underline">Hahn Sparkling</a> · <a href="https://livingwaterdelivered.com" style="color:inherit;text-decoration:underline">Living Water</a> · <a href="https://fishingpierhopper.com" style="color:inherit;text-decoration:underline">Pier Hopper</a> · <a href="https://tortugueroturtles.com" style="color:inherit;text-decoration:underline">Track the Turtles</a> · <a href="https://wishafter.com" style="color:inherit;text-decoration:underline">Wish Ever After</a> · <a href="https://methuselahmoney.com" style="color:inherit;text-decoration:underline">Methuselah</a> · <a href="https://aihealthnwellness.com" style="color:inherit;text-decoration:underline">AI Health & Wellness</a> · <a href="https://davidworthingtonhahn.com" style="color:inherit;text-decoration:underline">David Hahn</a>
     </div>
   </footer>
+<script>
+  (function () {
+    var f = document.getElementById('waitlist');
+    if (!f) return;
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = document.getElementById('wl-email').value.trim();
+      fetch('https://formspree.io/f/xbdvqvrk', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ email: email, _subject: 'Hahn Sparkling waitlist signup' })
+      }).then(function () {
+        f.style.display = 'none';
+        document.getElementById('wl-ok').style.display = 'block';
+      }).catch(function () {
+        window.location.href = 'mailto:dhahn402@gmail.com?subject=Hahn%20Sparkling%20%E2%80%94%20Notify%20Me&body=' +
+          encodeURIComponent('Please add me to the first-pour list: ' + email);
+      });
+    });
+  })();
+</script>
 <!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9316e0db5804345a3aeb1fd7e233c25"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
