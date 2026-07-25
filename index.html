@@ -38,6 +38,14 @@
   .hero .mark{font-size:2.6rem;margin-bottom:1rem}
   .hero h1{font-size:clamp(3rem,9vw,5.5rem);font-weight:700;margin-bottom:.4rem}
   .hero h1 .amp{color:var(--ice2)}
+  /* refined serif lockup */
+  .hero h1.lockup{font-size:clamp(3.2rem,11vw,6rem);font-weight:600;color:var(--ink);margin-bottom:0;line-height:.92}
+  .lk-div{display:flex;align-items:center;justify-content:center;gap:15px;margin:.55rem 0 .35rem}
+  .lk-div i{display:block;width:clamp(38px,11vw,78px);height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+  .lk-div i:last-child{background:linear-gradient(90deg,var(--gold),transparent)}
+  .lk-div span{color:var(--gold);font-size:.95rem;line-height:1}
+  .lk-spark{font-family:"Inter",sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:clamp(.36em,2.2vw,.62em);font-size:clamp(1.05rem,4.4vw,1.75rem);color:var(--ice);padding-left:clamp(.36em,2.2vw,.62em)}
+  .lk-sub{font-family:"Inter",sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.32em;font-size:.66rem;color:var(--gold);margin-top:1.1rem;padding-left:.32em}
   .hero .tag{font-family:"Cormorant Garamond",serif;font-size:clamp(1.4rem,3.4vw,2.1rem);color:var(--ice);font-weight:500;margin-bottom:1.6rem}
   .hero .promise{color:var(--muted);font-size:clamp(1.05rem,2vw,1.2rem);max-width:44ch;margin:0 auto 2.2rem}
   .btn{display:inline-block;font-weight:600;font-size:1rem;padding:.9rem 1.8rem;border-radius:999px;transition:transform .15s,background .2s}
@@ -82,7 +90,10 @@
     <div class="wrap">
       <div class="mark">💧</div>
       <span class="comingsoon">Coming Soon</span>
-      <h1>Hahn <span class="amp">Sparkling</span></h1>
+      <h1 class="lockup">Hahn</h1>
+      <div class="lk-div"><i></i><span>✦</span><i></i></div>
+      <div class="lk-spark">Sparkling</div>
+      <div class="lk-sub">Iceland · Since 2026</div>
       <p class="tag">An Icelandic-glacier vision, coming to life.</p>
       <p class="promise">A premium sparkling water we're building with purpose — crafted to refresh you, and to help put clean water in the hands of the forgotten.</p>
       <div>
