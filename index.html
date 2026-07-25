@@ -36,6 +36,16 @@
       radial-gradient(60% 50% at 50% 100%, rgba(203,164,90,.10), transparent 60%),
       linear-gradient(180deg,#0b3a5b 0%,#0a2540 70%);}
   .hero .mark{font-size:2.6rem;margin-bottom:1rem}
+  /* flowing glacial river */
+  .hero .wrap{position:relative;z-index:2}
+  .hero .river{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+  .hero .river .band{position:absolute;left:0;right:0;background-repeat:repeat-x;background-size:160px 34px;will-change:background-position}
+  .hero .river .b1{bottom:9%;height:34px;opacity:.22;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='34' viewBox='0 0 160 34'%3E%3Cpath d='M0 17 Q40 3 80 17 T160 17 V34 H0 Z' fill='%232f7fb0'/%3E%3C/svg%3E");animation:flowR 18s linear infinite}
+  .hero .river .b2{bottom:3.5%;height:34px;opacity:.16;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='34' viewBox='0 0 160 34'%3E%3Cpath d='M0 17 Q40 31 80 17 T160 17 V34 H0 Z' fill='%237ec8e3'/%3E%3C/svg%3E");animation:flowL 27s linear infinite}
+  .hero .river .b3{bottom:0;height:30px;opacity:.13;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='30' viewBox='0 0 160 30'%3E%3Cpath d='M0 15 Q40 4 80 15 T160 15 V30 H0 Z' fill='%23a8d8ea'/%3E%3C/svg%3E");animation:flowR 34s linear infinite}
+  @keyframes flowR{to{background-position-x:160px}}
+  @keyframes flowL{to{background-position-x:-160px}}
+  @media(prefers-reduced-motion:reduce){.hero .river .band{animation:none}}
   .hero h1{font-size:clamp(3rem,9vw,5.5rem);font-weight:700;margin-bottom:.4rem}
   .hero h1 .amp{color:var(--ice2)}
   /* refined serif lockup */
@@ -87,6 +97,7 @@
     <option value="https://translate.google.com/translate?sl=en&amp;tl=ar&amp;u=https://hahnsparkling.com/">العربية</option>
   </select>
   <section class="hero">
+    <div class="river" aria-hidden="true"><span class="band b1"></span><span class="band b2"></span><span class="band b3"></span></div>
     <div class="wrap">
       <div class="mark">💧</div>
       <span class="comingsoon">Coming Soon</span>
@@ -116,6 +127,35 @@
       </div>
     </div>
   </section>
+
+  <!-- Iceland source map — free Carto dark tiles, no API key -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <section id="source-map">
+    <div class="wrap center">
+      <span class="eyebrow">From the Glaciers</span>
+      <h2>Born of ice, at the edge of the world</h2>
+      <p class="lead">Iceland — where glaciers older than history melt into some of the cleanest water on Earth. That's the source we're building toward: water shaped by fire and ice, filtered slow through ancient lava, far from the noise of the modern world.</p>
+      <div id="iceland-map" style="height:380px;border-radius:18px;border:1px solid var(--line);box-shadow:0 16px 44px rgba(0,0,0,.45);margin-top:1.8rem;position:relative;z-index:0"></div>
+      <p class="lead" style="margin-top:1.5rem;max-width:60ch;margin-left:auto;margin-right:auto;font-size:1.02rem;color:var(--muted)">The great glaciers — Iceland's mighty <strong style="color:var(--ice)">Vatnajökull</strong>, and one day the wild ice of <strong style="color:var(--ice)">Alaska</strong> — hold the last truly pristine water on the planet. Our dream is to bottle that purity and share it with purpose.</p>
+      <div style="margin-top:2rem;display:inline-block;background:rgba(203,164,90,.09);border:1px solid rgba(203,164,90,.32);border-radius:16px;padding:16px 26px;max-width:90%">
+        <div style="color:var(--gold);font-weight:600;letter-spacing:.02em">🤝 Building it together</div>
+        <div style="color:var(--ice);font-size:.98rem;margin-top:3px">A proud shout-out to our partner <b>Flex, in Miami</b> — can't wait to see what we pour next. 🌊</div>
+      </div>
+    </div>
+  </section>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+  (function(){
+    var el=document.getElementById('iceland-map');
+    if(typeof L==='undefined'){ if(el)el.style.display='none'; return; }
+    var ice=[64.6,-17.6]; // Vatnajökull region, Iceland
+    var map=L.map('iceland-map',{scrollWheelZoom:false,attributionControl:true}).setView([64.9,-18.9],6);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:18,subdomains:'abcd',attribution:'&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+    L.circle(ice,{radius:70000,color:'#7ec8e3',weight:1,fillColor:'#7ec8e3',fillOpacity:.1}).addTo(map);
+    L.circleMarker(ice,{radius:10,color:'#cba45a',weight:2.5,fillColor:'#a8d8ea',fillOpacity:.9}).addTo(map)
+      .bindPopup('<b>Hahn Sparkling — the vision</b><br>Glacier-sourced · Iceland 🇮🇸');
+  })();
+  </script>
 
   <section class="mission" id="mission">
     <div class="wrap center">
