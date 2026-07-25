@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300" role="img" aria-label="Hahn Sparkling glacier crest logo">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e7cd86"/><stop offset=".52" stop-color="#c9a24b"/><stop offset="1" stop-color="#a9822f"/>
+    </linearGradient>
+    <linearGradient id="iceg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eaf6fc"/><stop offset="1" stop-color="#9cc9e0"/>
+    </linearGradient>
+    <path id="arcTop" d="M 66 150 A 84 84 0 0 1 234 150" fill="none"/>
+    <path id="arcBot" d="M 68 150 A 82 82 0 0 0 232 150" fill="none"/>
+  </defs>
+  <circle cx="150" cy="150" r="130" fill="none" stroke="url(#gold)" stroke-width="2.4"/>
+  <circle cx="150" cy="150" r="120" fill="none" stroke="url(#gold)" stroke-width="1" opacity=".65"/>
+  <text fill="url(#gold)" font-family="Cormorant Garamond, Georgia, serif" font-size="22" font-weight="600" letter-spacing="3.2" text-anchor="middle">
+    <textPath href="#arcTop" startOffset="50%">HAHN SPARKLING</textPath>
+  </text>
+  <text fill="#a9d4e8" font-family="Jost, Helvetica, sans-serif" font-size="9" font-weight="400" letter-spacing="2.6" text-anchor="middle">
+    <textPath href="#arcBot" startOffset="50%">ICELANDIC MINERAL WATER</textPath>
+  </text>
+  <path d="M150 70 L154.5 84 L168 88.5 L154.5 93 L150 107 L145.5 93 L132 88.5 L145.5 84 Z" fill="url(#gold)"/>
+  <path d="M95 178 L133 118 L160 158 L189 110 L227 178 Z" fill="url(#iceg)"/>
+  <path d="M95 178 L133 118 L149 141 L118 178 Z" fill="#7fb6d4" opacity=".55"/>
+  <path d="M189 110 L227 178 L176 178 L191 143 Z" fill="#ffffff" opacity=".85"/>
+  <path d="M92 186 q 58 -13 116 0" stroke="url(#gold)" stroke-width="1.6" fill="none"/>
+  <path d="M100 193 q 50 -9 100 0" stroke="#a9d4e8" stroke-width="1" fill="none" opacity=".6"/>
+  <text x="150" y="216" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="14" font-weight="600" letter-spacing="4" fill="#f4efe1">EST. 2026</text>
+</svg>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hahn Sparkling — Brand & Logo Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a1f2e; --ink2:#0e2a3f; --navy:#123b57; --glacier:#2f7fb0;
+    --ice:#a9d4e8; --ice-2:#cfe8f2; --cream:#f4efe1;
+    --gold-1:#e7cd86; --gold-2:#c9a24b; --gold-3:#a9822f;
+    --serif:"Cormorant Garamond",Georgia,serif; --sans:"Jost",system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:
+      radial-gradient(120% 80% at 50% -10%, rgba(22,74,107,.4), transparent 60%),
+      linear-gradient(180deg,#0e2a3f 0%, #0a1f2e 60%, #081a27 100%);
+    color:var(--cream); font-family:var(--sans); font-weight:300; line-height:1.6;
+    -webkit-font-smoothing:antialiased; min-height:100vh; padding-bottom:60px}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 26px}
+  header.top{text-align:center; padding:56px 26px 30px}
+  header .kick{font-size:.72rem; letter-spacing:.42em; text-transform:uppercase; color:var(--gold-2); font-weight:500}
+  header h1{font-family:var(--serif); font-weight:600; font-size:clamp(2.4rem,6vw,3.6rem); letter-spacing:.01em; margin:14px 0 6px; color:#fff}
+  header p{color:var(--ice); font-size:1.02rem; max-width:60ch; margin:0 auto; font-weight:300}
+  .rule{width:60px; height:1px; background:linear-gradient(90deg,transparent,var(--gold-2),transparent); margin:22px auto 0}
+
+  .section-label{text-align:center; font-size:.7rem; letter-spacing:.34em; text-transform:uppercase; color:var(--gold-2); margin:52px 0 8px; font-weight:500}
+  .concept-name{text-align:center; font-family:var(--serif); font-size:1.7rem; color:#fff; margin-bottom:4px}
+  .concept-note{text-align:center; color:var(--ice); font-size:.92rem; max-width:56ch; margin:0 auto 26px}
+
+  .stage{background:linear-gradient(180deg,#0f3149,#0b2436); border:1px solid rgba(201,162,75,.28);
+    border-radius:18px; padding:40px 24px; display:flex; align-items:center; justify-content:center; gap:40px; flex-wrap:wrap}
+  .stage.light{background:linear-gradient(180deg,#f4efe1,#e9e2cf); border-color:rgba(18,59,87,.18)}
+  .stage svg{display:block}
+
+  /* stacked wordmark lockup */
+  .lockup{text-align:center}
+  .lockup .hahn{font-family:var(--serif); font-weight:600; font-size:clamp(3rem,9vw,5rem); color:#fff; line-height:.95; letter-spacing:.02em}
+  .lockup .divider{display:flex; align-items:center; justify-content:center; gap:14px; margin:10px 0 8px}
+  .lockup .divider .line{width:64px; height:1px; background:linear-gradient(90deg,transparent,var(--gold-2))}
+  .lockup .divider .line.r{background:linear-gradient(90deg,var(--gold-2),transparent)}
+  .lockup .spark{font-family:var(--sans); font-weight:500; letter-spacing:.62em; text-transform:uppercase;
+    font-size:clamp(1rem,3.4vw,1.5rem); color:var(--ice); padding-left:.62em}
+  .lockup .desc{font-family:var(--sans); font-weight:400; letter-spacing:.34em; text-transform:uppercase;
+    font-size:.6rem; color:var(--gold-2); margin-top:16px}
+  .lockup.dark .hahn{color:var(--ink)}
+  .lockup.dark .spark{color:var(--glacier)}
+
+  .palette{display:flex; gap:0; border-radius:14px; overflow:hidden; margin-top:14px; border:1px solid rgba(201,162,75,.25)}
+  .sw{flex:1; height:74px; display:flex; align-items:flex-end; justify-content:center; padding-bottom:8px;
+    font-size:.62rem; letter-spacing:.08em; font-weight:400}
+  .cols3{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; margin-top:14px}
+  .note-card{background:rgba(255,255,255,.03); border:1px solid rgba(201,162,75,.2); border-radius:14px; padding:18px 20px}
+  .note-card h4{font-family:var(--serif); font-size:1.15rem; color:var(--gold-1); font-weight:600; margin-bottom:5px}
+  .note-card p{font-size:.86rem; color:var(--ice)}
+  .note-card .type-serif{font-family:var(--serif); font-size:1.9rem; color:#fff; line-height:1.1}
+  .note-card .type-sans{font-family:var(--sans); font-size:1rem; letter-spacing:.28em; color:var(--ice); text-transform:uppercase; margin-top:4px}
+  footer.brandfoot{text-align:center; color:var(--ice); font-size:.8rem; margin-top:56px; opacity:.8}
+  footer .verse{font-family:var(--serif); font-style:italic; color:var(--gold-1); font-size:1.05rem; margin-bottom:8px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="kick">Hahn Technologies Corp · Design Studio</div>
+  <h1>Hahn Sparkling</h1>
+  <p>A premium sparkling mineral-water identity — the heritage of Saratoga, the refinement of Pellegrino, wholly our own. Vector-built to scale from favicon to glass bottle.</p>
+  <div class="rule"></div>
+</header>
+
+<div class="wrap">
+
+  <!-- CONCEPT A — THE CREST -->
+  <div class="section-label">Concept A · The Signature</div>
+  <div class="concept-name">The Glacier Crest</div>
+  <p class="concept-note">A heritage roundel — arched wordmark, a four-point spark, and an Icelandic glacier line. The mark that goes on the bottle cap, the label seal, and the site.</p>
+  <div class="stage">
+    <!-- CREST (on dark) -->
+    <svg width="290" height="290" viewBox="0 0 300 300" role="img" aria-label="Hahn Sparkling glacier crest">
+      <defs>
+        <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#e7cd86"/><stop offset=".52" stop-color="#c9a24b"/><stop offset="1" stop-color="#a9822f"/>
+        </linearGradient>
+        <linearGradient id="iceg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#eaf6fc"/><stop offset="1" stop-color="#9cc9e0"/>
+        </linearGradient>
+        <path id="arcTop" d="M 66 150 A 84 84 0 0 1 234 150" fill="none"/>
+        <path id="arcBot" d="M 68 150 A 82 82 0 0 0 232 150" fill="none"/>
+      </defs>
+      <circle cx="150" cy="150" r="130" fill="none" stroke="url(#gold)" stroke-width="2.4"/>
+      <circle cx="150" cy="150" r="120" fill="none" stroke="url(#gold)" stroke-width="1" opacity=".65"/>
+      <text fill="url(#gold)" font-family="Cormorant Garamond, serif" font-size="22" font-weight="600" letter-spacing="3.2" text-anchor="middle">
+        <textPath href="#arcTop" startOffset="50%">HAHN SPARKLING</textPath>
+      </text>
+      <text fill="#a9d4e8" font-family="Jost, sans-serif" font-size="9" font-weight="400" letter-spacing="2.6" text-anchor="middle">
+        <textPath href="#arcBot" startOffset="50%">ICELANDIC MINERAL WATER</textPath>
+      </text>
+      <!-- spark -->
+      <path d="M150 70 L154.5 84 L168 88.5 L154.5 93 L150 107 L145.5 93 L132 88.5 L145.5 84 Z" fill="url(#gold)"/>
+      <!-- glacier peaks -->
+      <path d="M95 178 L133 118 L160 158 L189 110 L227 178 Z" fill="url(#iceg)"/>
+      <path d="M95 178 L133 118 L149 141 L118 178 Z" fill="#7fb6d4" opacity=".55"/>
+      <path d="M189 110 L227 178 L176 178 L191 143 Z" fill="#ffffff" opacity=".85"/>
+      <!-- waterline -->
+      <path d="M92 186 q 58 -13 116 0" stroke="url(#gold)" stroke-width="1.6" fill="none"/>
+      <path d="M100 193 q 50 -9 100 0" stroke="#a9d4e8" stroke-width="1" fill="none" opacity=".6"/>
+      <text x="150" y="216" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="14" font-weight="600" letter-spacing="4" fill="#f4efe1">EST. 2026</text>
+    </svg>
+    <!-- Wordmark beside crest -->
+    <div class="lockup">
+      <div class="hahn">Hahn</div>
+      <div class="divider"><span class="line"></span><span style="color:var(--gold-1);font-size:.9rem">✦</span><span class="line r"></span></div>
+      <div class="spark">Sparkling</div>
+      <div class="desc">Natural Sparkling Mineral Water</div>
+    </div>
+  </div>
+
+  <!-- CONCEPT B — THE WORDMARK on light -->
+  <div class="section-label">Concept B · The Wordmark</div>
+  <div class="concept-name">Refined Serif Lockup</div>
+  <p class="concept-note">Clean, editorial, timeless — for the site header, letterhead, and the front of the label. Shown here on the ice-cream label stock.</p>
+  <div class="stage light">
+    <div class="lockup dark">
+      <div class="hahn">Hahn</div>
+      <div class="divider"><span class="line" style="background:linear-gradient(90deg,transparent,var(--gold-2))"></span><span style="color:var(--gold-2);font-size:.9rem">✦</span><span class="line r" style="background:linear-gradient(90deg,var(--gold-2),transparent)"></span></div>
+      <div class="spark">Sparkling</div>
+      <div class="desc" style="color:var(--gold-3)">Iceland · Since 2026</div>
+    </div>
+  </div>
+
+  <!-- CONCEPT C — ON THE BOTTLE -->
+  <div class="section-label">Concept C · On the Bottle</div>
+  <div class="concept-name">The Cobalt Glass Bottle</div>
+  <p class="concept-note">Tall cobalt glass, gold-foil crest, embossed serif — the Saratoga silhouette with a Pellegrino soul. This is the shelf presence.</p>
+  <div class="stage">
+    <svg width="150" height="420" viewBox="0 0 150 420" role="img" aria-label="Hahn Sparkling cobalt bottle mockup">
+      <defs>
+        <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#0c2f4a"/><stop offset=".18" stop-color="#1b567e"/>
+          <stop offset=".5" stop-color="#2f7fb0"/><stop offset=".82" stop-color="#1b567e"/><stop offset="1" stop-color="#0c2f4a"/>
+        </linearGradient>
+        <linearGradient id="glassHi" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset=".3" stop-color="#dff0fb" stop-opacity=".55"/><stop offset=".45" stop-color="#ffffff" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#e7cd86"/><stop offset="1" stop-color="#a9822f"/>
+        </linearGradient>
+      </defs>
+      <!-- bottle body -->
+      <path d="M52 44 h46 v20 c0 10 16 22 16 52 v210 c0 30 -16 40 -16 60 v0 c0 12 -8 20 -20 20 h-6 c-12 0 -20 -8 -20 -20 v0 c0 -20 -16 -30 -16 -60 v-210 c0 -30 16 -42 16 -52 z"
+            transform="translate(-13,0)" fill="url(#glass)" stroke="#0a2036" stroke-width="1.5"/>
+      <!-- glass highlight -->
+      <path d="M52 44 h46 v20 c0 10 16 22 16 52 v210 c0 30 -16 40 -16 60 c0 12 -8 20 -20 20 h-6 c-12 0 -20 -8 -20 -20 c0 -20 -16 -30 -16 -60 v-210 c0 -30 16 -42 16 -52 z"
+            transform="translate(-13,0)" fill="url(#glassHi)"/>
+      <!-- cap -->
+      <rect x="26" y="20" width="46" height="30" rx="3" fill="url(#cap)"/>
+      <rect x="30" y="46" width="38" height="8" rx="2" fill="#0c2f4a"/>
+      <!-- gold-foil crest badge -->
+      <circle cx="49" cy="176" r="30" fill="none" stroke="url(#cap)" stroke-width="1.6"/>
+      <path d="M49 152 L51.6 160 L60 162.5 L51.6 165 L49 173 L46.4 165 L38 162.5 L46.4 160 Z" fill="url(#cap)"/>
+      <path d="M32 190 L44 172 L52 184 L60 170 L66 190 Z" fill="#dff0fb"/>
+      <text x="49" y="200" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="6.4" letter-spacing="1.4" fill="#e7cd86">HAHN</text>
+      <!-- label wordmark -->
+      <text x="49" y="238" text-anchor="middle" font-family="Cormorant Garamond, serif" font-weight="600" font-size="20" fill="#f4efe1">Hahn</text>
+      <text x="49" y="255" text-anchor="middle" font-family="Jost, sans-serif" font-size="7.5" letter-spacing="4" fill="#a9d4e8">SPARKLING</text>
+      <line x1="30" y1="264" x2="68" y2="264" stroke="#c9a24b" stroke-width=".6"/>
+      <text x="49" y="278" text-anchor="middle" font-family="Jost, sans-serif" font-size="4.6" letter-spacing="1.8" fill="#c9a24b">NATURAL MINERAL WATER · ICELAND</text>
+    </svg>
+
+    <div style="max-width:300px">
+      <div class="lockup" style="text-align:left">
+        <div class="hahn" style="font-size:3rem">Hahn</div>
+        <div class="spark" style="font-size:1.1rem;letter-spacing:.5em;padding-left:.5em">Sparkling</div>
+      </div>
+      <p style="color:var(--ice);font-size:.9rem;margin-top:16px">Cobalt glass says <em>heritage</em> before a word is read. The gold crest is the seal of trust. And every bottle carries the mission — <span style="color:var(--gold-1)">clean water for the forgotten.</span></p>
+    </div>
+  </div>
+
+  <!-- PALETTE + TYPE -->
+  <div class="section-label">The System</div>
+  <div class="concept-name">Palette &amp; Type</div>
+  <div class="palette">
+    <div class="sw" style="background:#0a1f2e;color:#a9d4e8">Deep Ink</div>
+    <div class="sw" style="background:#123b57;color:#cfe8f2">Glacier Navy</div>
+    <div class="sw" style="background:#2f7fb0;color:#0a1f2e">Cobalt</div>
+    <div class="sw" style="background:#a9d4e8;color:#0a1f2e">Ice</div>
+    <div class="sw" style="background:#c9a24b;color:#0a1f2e">Gold Foil</div>
+    <div class="sw" style="background:#f4efe1;color:#0a1f2e">Label Cream</div>
+  </div>
+  <div class="cols3">
+    <div class="note-card">
+      <h4>Display</h4>
+      <div class="type-serif">Hahn Sparkling</div>
+      <p style="margin-top:6px">Cormorant Garamond — an elegant high-contrast serif. Heritage, calm, expensive.</p>
+    </div>
+    <div class="note-card">
+      <h4>Detail</h4>
+      <div class="type-sans">Natural · Iceland · 2026</div>
+      <p style="margin-top:10px">Jost — a clean geometric sans, wide-tracked, for the fine print and legal lines.</p>
+    </div>
+    <div class="note-card">
+      <h4>The Rule</h4>
+      <p>Gold is for trust, never loud. Blue is the water. Cream is the calm. White space is the luxury. <b style="color:var(--gold-1)">Honesty on every claim</b> — provenance verified before it's printed.</p>
+    </div>
+  </div>
+
+  <footer class="brandfoot">
+    <div class="verse">"He turned the rock into a pool of water, the flint into a spring." — Psalm 114:8</div>
+    Hahn Sparkling · a Hahn Technologies Corp brand · concepts by the Hahn Design Studio + AI graphics team
+  </footer>
+</div>
+</body>
+</html>
