@@ -98,6 +98,20 @@
   .join{background:rgba(126,200,227,.06);border:1px solid var(--line);border-radius:20px;padding:clamp(2rem,5vw,3rem);text-align:center;margin-top:1rem}
   .join .k{color:var(--gold);font-weight:600}
   .join a.big{color:var(--ice2);font-weight:700;font-size:1.15rem}
+  /* Google review CTA */
+  .review{background:linear-gradient(160deg,#0b3a5b,#0a2540);text-align:center}
+  .review .stars{font-size:clamp(1.6rem,4vw,2.1rem);letter-spacing:.18em;line-height:1;margin-bottom:1rem;
+    background:linear-gradient(90deg,var(--gold),#f0dca0,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 1px 4px rgba(203,164,90,.25))}
+  .review h2{margin-bottom:.6rem}
+  .review .lead{max-width:44ch;margin:0 auto 2rem}
+  .review-panel{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(1.4rem,4vw,2.6rem);margin-top:.4rem}
+  .review .btn-review{background:var(--gold);color:#241a06;font-size:1.02rem;padding:.95rem 2rem;box-shadow:0 8px 24px rgba(203,164,90,.28)}
+  .review .btn-review:hover{background:#dcb96f;transform:translateY(-2px)}
+  .qr-card{background:#fff;border-radius:18px;padding:1.1rem 1.1rem .85rem;box-shadow:0 14px 40px rgba(0,0,0,.4)}
+  .qr-card img{display:block;width:120px;height:120px}
+  .qr-card .cap{color:#0a2540;font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-top:.6rem}
+  @media(max-width:520px){.review-panel{flex-direction:column}}
   footer{border-top:1px solid var(--line);padding:2.4rem 0;text-align:center;color:var(--muted);font-size:.9rem}
   footer .verse{color:var(--gold);font-style:italic;font-size:.85rem;margin-top:.6rem}
   footer a{color:var(--ice2);font-weight:600}
@@ -244,6 +258,22 @@
     </div>
   </section>
 
+  <section class="review" id="review">
+    <div class="wrap center">
+      <span class="eyebrow">Your Voice Matters</span>
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <h2>Tasted the difference? Leave a review.</h2>
+      <p class="lead">A quick Google review helps others discover Hahn Sparkling. Thank you.</p>
+      <div class="review-panel">
+        <a class="btn btn-review" href="https://g.page/r/CYziPGHlvzjCEAE/review" target="_blank" rel="noopener">Leave a Google Review</a>
+        <div class="qr-card">
+          <img src="review-qr.svg" width="120" height="120" alt="QR code to leave a Google review" />
+          <div class="cap">Scan to review</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <div class="wrap">
       <div><strong>💧 Hahn Sparkling</strong> · Icelandic Glacier Water · A Faith &amp; Fitness Enterprises venture · <a href="https://dhahn402.github.io/hahn-family/" target="_blank" rel="noopener">Hahn Family of Companies</a></div>
@@ -260,7 +290,7 @@
   
     <div class="hahn-family-row" style="max-width:920px;margin:1.3rem auto 0;padding:1rem 1rem 0;border-top:1px solid rgba(128,128,128,.22);font-size:.78rem;line-height:2;text-align:center;opacity:.75">
       <strong>The Hahn Family of Companies</strong><br>
-      <a href="https://hahntechcorp.com" style="color:inherit;text-decoration:underline">Hahn Tech Corp</a> · <a href="https://koalateakratom.com" style="color:inherit;text-decoration:underline">Koala Tea Kratom</a> · <a href="https://red-sea-rentals.com" style="color:inherit;text-decoration:underline">Red Sea Rentals</a> · <a href="https://readytechrepairs.com" style="color:inherit;text-decoration:underline">Ready Tech Repairs</a> · <a href="https://ubuntumylife.com" style="color:inherit;text-decoration:underline">Ubuntu My Life</a> · <a href="https://flipthecupfinancials.com" style="color:inherit;text-decoration:underline">Flip the Cup</a> · <a href="https://everandamen.org" style="color:inherit;text-decoration:underline">Ever & Amen</a> · <a href="https://donutsphobagels.com" style="color:inherit;text-decoration:underline">Donuts Pho Bagels</a> · <a href="https://hahnsparkling.com" style="color:inherit;text-decoration:underline">Hahn Sparkling</a> · <a href="https://livingwaterdelivered.com" style="color:inherit;text-decoration:underline">Living Water</a> · <a href="https://fishingpierhopper.com" style="color:inherit;text-decoration:underline">Pier Hopper</a> · <a href="https://tortugueroturtles.com" style="color:inherit;text-decoration:underline">Track the Turtles</a> · <a href="https://wishafter.com" style="color:inherit;text-decoration:underline">Wish Ever After</a> · <a href="https://methuselahmoney.com" style="color:inherit;text-decoration:underline">Methuselah</a> · <a href="https://aihealthnwellness.com" style="color:inherit;text-decoration:underline">AI Health & Wellness</a> · <a href="https://davidworthingtonhahn.com" style="color:inherit;text-decoration:underline">David Hahn</a>
+      <a href="https://hahntechcorp.com" style="color:inherit;text-decoration:underline">Hahn Tech Corp</a> · <a href="https://koalateakratom.com" style="color:inherit;text-decoration:underline">Koala Tea Kratom</a> · <a href="https://redsearentals.pages.dev" style="color:inherit;text-decoration:underline">Red Sea Rentals</a> · <a href="https://readytechrepairs.com" style="color:inherit;text-decoration:underline">Ready Tech Repairs</a> · <a href="https://ubuntumylife.com" style="color:inherit;text-decoration:underline">Ubuntu My Life</a> · <a href="https://flipthecupfinancials.com" style="color:inherit;text-decoration:underline">Flip the Cup</a> · <a href="https://everandamen.org" style="color:inherit;text-decoration:underline">Ever & Amen</a> · <a href="https://donutsphobagels.com" style="color:inherit;text-decoration:underline">Donuts Pho Bagels</a> · <a href="https://hahnsparkling.com" style="color:inherit;text-decoration:underline">Hahn Sparkling</a> · <a href="https://livingwaterdelivered.com" style="color:inherit;text-decoration:underline">Living Water</a> · <a href="https://fishingpierhopper.com" style="color:inherit;text-decoration:underline">Pier Hopper</a> · <a href="https://tortugueroturtles.com" style="color:inherit;text-decoration:underline">Track the Turtles</a> · <a href="https://wishafter.com" style="color:inherit;text-decoration:underline">Wish Ever After</a> · <a href="https://methuselahmoney.com" style="color:inherit;text-decoration:underline">Methuselah</a> · <a href="https://aihealthnwellness.com" style="color:inherit;text-decoration:underline">AI Health & Wellness</a> · <a href="https://davidworthingtonhahn.com" style="color:inherit;text-decoration:underline">David Hahn</a>
     </div>
   </footer>
 <script>
