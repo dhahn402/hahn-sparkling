@@ -46,6 +46,25 @@
   @keyframes flowR{to{background-position-x:160px}}
   @keyframes flowL{to{background-position-x:-160px}}
   @media(prefers-reduced-motion:reduce){.hero .river .band{animation:none}}
+  /* Ichthys (Jesus fish) swimming over the water — Chosen-style loop */
+  .hs-pool{position:absolute;left:50%;bottom:2%;transform:translateX(-50%);
+    width:min(700px,94vw);height:110px;z-index:1;pointer-events:none;overflow:visible}
+  .hs-fish{position:absolute;top:0;left:0;width:60px;height:auto;
+    offset-path:path('M 60 55 C 200 8, 500 8, 640 55 C 500 102, 200 102, 60 55 Z');
+    offset-rotate:auto;offset-distance:0%;
+    animation:hsSwim 20s linear infinite;
+    filter:drop-shadow(0 2px 6px rgba(203,164,90,.35))}
+  .hs-fish.f2{width:38px;opacity:.55;
+    animation:hsSwim 20s linear infinite;animation-delay:-11s;
+    filter:drop-shadow(0 2px 5px rgba(168,216,234,.35))}
+  .hs-fish .fish-glide{animation:hsBob 3.6s ease-in-out infinite}
+  @keyframes hsSwim{to{offset-distance:100%}}
+  @keyframes hsBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2.5px)}}
+  @media(prefers-reduced-motion:reduce){
+    .hs-fish{animation-duration:60s}
+    .hs-fish.f2{animation-duration:60s;animation-delay:-33s}
+    .hs-fish .fish-glide{animation:none}}
+  @media(max-width:560px){.hs-pool{height:90px}.hs-fish{width:48px}.hs-fish.f2{width:32px}}
   .hero h1{font-size:clamp(3rem,9vw,5.5rem);font-weight:700;margin-bottom:.4rem}
   .hero h1 .amp{color:var(--ice2)}
   /* refined serif lockup */
@@ -98,6 +117,18 @@
   </select>
   <section class="hero">
     <div class="river" aria-hidden="true"><span class="band b1"></span><span class="band b2"></span><span class="band b3"></span></div>
+    <div class="hs-pool" aria-hidden="true">
+      <svg class="hs-fish" viewBox="0 0 120 60" fill="none" stroke="#cba45a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+        <g class="fish-glide">
+          <path d="M114 30 C 86 8, 42 8, 20 26 M114 30 C 86 52, 42 52, 20 34 M20 26 L 4 14 M20 34 L 4 46"/>
+        </g>
+      </svg>
+      <svg class="hs-fish f2" viewBox="0 0 120 60" fill="none" stroke="#a8d8ea" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+        <g class="fish-glide">
+          <path d="M114 30 C 86 8, 42 8, 20 26 M114 30 C 86 52, 42 52, 20 34 M20 26 L 4 14 M20 34 L 4 46"/>
+        </g>
+      </svg>
+    </div>
     <div class="wrap">
       <div class="mark">💧</div>
       <span class="comingsoon">Coming Soon</span>
